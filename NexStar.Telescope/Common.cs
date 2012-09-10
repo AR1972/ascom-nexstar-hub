@@ -301,16 +301,16 @@ namespace ASCOM.NexStar
                             }
                             catch (TimeoutException Ex)
                             {
-                                Log.LogMessage(DriverId, "ScopeConnect() : " + Ex.Message);
+                                Log.LogMessage(DriverId, "ScopeConnect(" + Connect.ToString() + ") : " + Ex.Message);
                             }
                             catch (Exception Ex)
                             {
-                                Log.LogMessage(DriverId, "ScopeConnect() : " + Ex.Message);
+                                Log.LogMessage(DriverId, "ScopeConnect(" + Connect.ToString() + ") : " + Ex.Message);
                             }
                         }
                     }
-                    Log.LogMessage(DriverId, "ScopeConnect() : no scope found");
-                    throw new ASCOM.NotConnectedException(DriverId + "ScopeConnect() : no scope found");
+                    Log.LogMessage(DriverId, "ScopeConnect(" + Connect.ToString() + ") : no scope found");
+                    throw new ASCOM.NotConnectedException(DriverId + "ScopeConnect(" + Connect.ToString() + ") : no scope found");
                 }
                 else
                 {
@@ -320,6 +320,15 @@ namespace ASCOM.NexStar
             }
             else
             {
+                if (Server.ObjectsCount > 0 || Server.ServerLockCount > 0)
+                {
+                    Log.LogMessage(DriverId, "ScopeConnect(" + Connect.ToString() + ") : disconnect suppressed");
+                    return false;
+                }
+                else
+                {
+                    Log.LogMessage(DriverId, "ScopeConnect(" + Connect.ToString() + ") : disconnecting");
+                }
                 /* disconnect from scope */
                 if (Scope.isConnected == true && ScopeSerialPort != null)
                 {
@@ -344,7 +353,7 @@ namespace ASCOM.NexStar
                             }
                             catch (Exception Ex)
                             {
-                                Log.LogMessage(DriverId, "ScopeConnect() : " + Ex.Message);
+                                Log.LogMessage(DriverId, "ScopeConnect(" + Connect.ToString() + ") : " + Ex.Message);
                             }
                             finally
                             {
