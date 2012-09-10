@@ -320,7 +320,7 @@ namespace ASCOM.NexStar
             }
             else
             {
-                if (Server.ObjectsCount > 0 || Server.ServerLockCount > 0)
+                if (Server.ObjectsCount > 1 || Server.ServerLockCount > 1)
                 {
                     Log.LogMessage(DriverId, "ScopeConnect(" + Connect.ToString() + ") : disconnect suppressed");
                     return false;
