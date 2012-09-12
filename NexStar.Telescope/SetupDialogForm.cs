@@ -50,6 +50,7 @@ namespace ASCOM.NexStar
             comboBox2.SelectedIndex = 0;
             comboBox2.SelectedIndex = ((int)Scope.TrackingMode);
             checkBox1.Checked = Scope.PecEnabled;
+            this.Shown += new EventHandler(SetupDialogForm_Shown);
         }
 
         public void updatelst()
@@ -135,8 +136,9 @@ namespace ASCOM.NexStar
             }
         }
 
-        private void SetupDialogForm_Load(object sender, EventArgs e)
+        void SetupDialogForm_Shown(object sender, EventArgs e)
         {
+            this.TopMost = true;
         }
 
         /* allow only numbers in the text boxes */

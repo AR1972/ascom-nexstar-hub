@@ -379,7 +379,6 @@ namespace ASCOM.NexStar
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NexStar Setup";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SetupDialogForm_FormClosing);
-            this.Load += new System.EventHandler(this.SetupDialogForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picASCOM)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tab_scope.ResumeLayout(false);
