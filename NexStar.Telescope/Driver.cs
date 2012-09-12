@@ -633,13 +633,13 @@ namespace ASCOM.NexStar
             if (Scope.TargetRaSet && Scope.TargetDecSet)
             {
                 Common.SlewToRaDec(Scope.TargetRa, Scope.TargetDec);
+                Scope.TargetRaSet = false;
+                Scope.TargetDecSet = false;
                 while (Scope.isSlewing)
                 {
                     Thread.Sleep(500);
                     Application.DoEvents();
                 }
-                Scope.TargetRaSet = false;
-                Scope.TargetDecSet = false;
             }
         }
 
@@ -662,13 +662,13 @@ namespace ASCOM.NexStar
             if (Scope.TargetRaSet && Scope.TargetDecSet)
             {
                 Common.SlewToRaDec(Scope.TargetRa, Scope.TargetDec);
+                Scope.TargetRaSet = false;
+                Scope.TargetDecSet = false;
                 while (Scope.isSlewing)
                 {
                     Thread.Sleep(500);
                     Application.DoEvents();
                 }
-                Scope.TargetRaSet = false;
-                Scope.TargetDecSet = false;
             }
         }
 
