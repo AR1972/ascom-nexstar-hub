@@ -97,7 +97,8 @@ namespace ASCOM.NexStar
 #endif
             //TODO: Implement your additional construction here
             Common.DriverId = Marshal.GenerateProgIdForType(this.GetType());
-            Common.DriverDescription = ServedClassNameAttribute.GetCustomAttribute(typeof(Telescope), typeof(ServedClassNameAttribute)).ToString();
+            Attribute attr = ServedClassNameAttribute.GetCustomAttribute(typeof(Telescope), typeof(ServedClassNameAttribute));
+            Common.DriverDescription = ((ServedClassNameAttribute)attr).DisplayName;
         }
 
         //
