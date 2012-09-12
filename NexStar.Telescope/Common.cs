@@ -208,6 +208,8 @@ namespace ASCOM.NexStar
         private static object Disconnecting = null;
         /* timer to restart the GPS service once pulse guiding has ended */
         private static System.Timers.Timer GuideTimer = null;
+        /* */
+        private static System.Timers.Timer TargetTimer = null;
         /* events */
         private delegate void EventHandler(object sender, EventArgs<object> e);
         private static event EventHandler<EventArgs<bool>> ScopeEventConnected;
@@ -245,6 +247,10 @@ namespace ASCOM.NexStar
             GuideTimer.Enabled = false;
             GuideTimer.AutoReset = false;
             GuideTimer.Elapsed += new System.Timers.ElapsedEventHandler(GuideTimer_Elapsed);
+            TargetTimer = new System.Timers.Timer();
+            TargetTimer.Enabled = false;
+            TargetTimer.AutoReset = false;
+            TargetTimer.Elapsed += new System.Timers.ElapsedEventHandler(TargetTimer_Elapsed);
         }
 
         public static bool ScopeConnect(bool Connect)
@@ -1846,6 +1852,12 @@ namespace ASCOM.NexStar
             ThreadPool.QueueUserWorkItem(new WaitCallback(PulseGuiding), false);
         }
 
+        static void TargetTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            Scope.TargetDecSet = false;
+            Scope.TargetRaSet = false;
+        }
+
         #endregion
 
         #region saved properties
@@ -2682,8 +2694,18 @@ namespace ASCOM.NexStar
                 Log.LogMessage(DriverId, "SetTargetRightAscention() : invalid value " + value.ToString());
                 throw new ASCOM.InvalidValueException(DriverId + ": SetTargetRightAscention() : invalid value " + value.ToString());
             }
+            while (Scope.TargetRaSet)
+            {
+                Thread.Sleep(500);
+                Application.DoEvents();
+            }
             Scope.TargetRaSet = true;
             Scope.TargetRa = value;
+            /* give client's 2 sec to call method */
+            /* then TargetRaSet will be set to false */
+            /* and TargetRa can be set again */
+            TargetTimer.Interval = 1000 * 2;
+            TargetTimer.Enabled = true;
         }
 
         public static double GetTargetDeclination()
@@ -2705,8 +2727,18 @@ namespace ASCOM.NexStar
                 Log.LogMessage(DriverId, "SetTargetDeclination() : invalid value " + value.ToString());
                 throw new ASCOM.InvalidValueException(DriverId + ": SetTargetDeclination() : invalid value " + value.ToString());
             }
+            while (Scope.TargetDecSet)
+            {
+                Thread.Sleep(500);
+                Application.DoEvents();
+            }
             Scope.TargetDecSet = true;
             Scope.TargetDec = value;
+            /* give client's 2 sec to call method */
+            /* then TargetDecSet will be set to false */
+            /* and TargetDec can be set again */
+            TargetTimer.Interval = 1000 * 2;
+            TargetTimer.Enabled = true;
         }
 
         public static void SetSlewSettleTime(short value)
