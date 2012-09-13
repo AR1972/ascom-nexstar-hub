@@ -208,7 +208,12 @@ namespace ASCOM.NexStar
         private static object Disconnecting = null;
         /* timer to restart the GPS service once pulse guiding has ended */
         private static System.Timers.Timer GuideTimer = null;
-        /* */
+        /* try to prevent case presented in the hub readme by 
+         setting TargetRaSet, TargetDecSet to false after method
+         call and using a while loop to block setting of TargetRa,
+         TargetDec until TargetRaSet, TargetDecSet are set to false 
+         use a timer to set TargetRaSet, TargetDecSet to false if 
+         a method is never called */
         private static System.Timers.Timer TargetTimer = null;
         /* events */
         private delegate void EventHandler(object sender, EventArgs<object> e);
