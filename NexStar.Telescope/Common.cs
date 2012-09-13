@@ -494,7 +494,7 @@ namespace ASCOM.NexStar
                     }
                     else
                     {
-                        Scope.isSlewing = true;
+                        Scope.isSlewing = true ^ Scope.isGuiding;
                     }
                     return true;
                 }
