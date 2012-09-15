@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace ASCOM.NexStar
 {
-    [ComVisibleAttribute(false)]
+    [ComVisible(false)]
     internal static class Scope
     /* class to hold the global telescope state variables */
     {
