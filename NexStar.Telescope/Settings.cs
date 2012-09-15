@@ -25,7 +25,7 @@ using ASCOM;
 namespace ASCOM.NexStar.Properties
 {
     [SettingsProvider(typeof(ASCOM.SettingsProvider))]
-    [ASCOM.DeviceId("ASCOM.NexStar.Telescope", DeviceName = "NexStar Telescope")]
+    [ASCOM.DeviceId("ASCOM.NexStar.Telescope", DeviceName = "Celestron NexStar Telescope")]
     internal sealed partial class Settings
     {
     }
