@@ -1,0 +1,337 @@
+Startup ASCOM Device Conformance Checker - 32bit mode
+Startup ASCOM Platform 6 - SP1 6.0.0.0
+ 
+19:03:26.567 Form.Load                     DEBUG    Found loaded assembly: mscorlib 2.0.0.0
+19:03:26.568 Form.Load                     DEBUG    Found loaded assembly: Conform 6.0.0.43
+19:03:26.571 Form.Load                     DEBUG    Found loaded assembly: Microsoft.VisualBasic 8.0.0.0
+19:03:26.572 Form.Load                     DEBUG    Found loaded assembly: System 2.0.0.0
+19:03:26.574 Form.Load                     DEBUG    Found loaded assembly: System.Windows.Forms 2.0.0.0
+19:03:26.575 Form.Load                     DEBUG    Found loaded assembly: System.Drawing 2.0.0.0
+19:03:26.577 Form.Load                     DEBUG    Found loaded assembly: System.Runtime.Remoting 2.0.0.0
+19:03:26.578 Form.Load                     DEBUG    Found loaded assembly: ASCOM.Utilities 6.0.0.0
+19:03:26.581 Form.Load                     DEBUG    Found loaded assembly: System.Core 3.5.0.0
+19:03:26.583                               DEBUG    
+ 
+Support information 
+19:03:28.774 Support                       INFO     OS version: Microsoft Windows NT 6.1.7601 Service Pack 1
+19:03:28.775 Support                       INFO     .NET version: 2.0.50727.5456
+19:03:28.777 Support                       INFO     Processor count: 4
+19:03:28.778 Support                       INFO     System directory: C:\Windows\system32
+19:03:28.780 Support                       INFO     Program files directory: C:\Program Files
+19:03:28.783 Support                       INFO     Common program files directory: C:\Program Files\Common Files
+19:03:28.784 Support                       INFO     Common application data directory: C:\ProgramData
+19:03:28.786 Support                       INFO     Current directory: C:\Program Files\ASCOM\Conform
+19:03:28.788 Support                       INFO     Current culture: en-US
+19:03:28.790 Support                       INFO     Total physical memory: 3,663,101,952
+19:03:28.792 Support                       INFO     Total virtual memory: 2,147,352,576
+19:03:28.868 Support                       INFO     OS full name: Microsoft Windows 7 Ultimate 
+19:03:28.870 Support                       INFO     Available physical memory: 2,822,221,824
+19:03:28.872 Support                       INFO     Available virtual memory: 1,984,647,168
+ 
+ 
+ 
+ConformanceCheck ASCOM Device Conformance Checker Version 6.0.0.43
+ConformanceCheck Running on ASCOM Platform 6.0 Build: 6.0.10028.2207
+ 
+ConformanceCheck Driver ProgID: ASCOM.NexStar.Telescope
+ 
+Error handling 
+Error number for "Not Implemented" is: 80040400
+Error number for "Invalid Value 1" is: 80040401
+Error number for "Invalid Value 2" is: 80040405
+Error number for "Value Not Set 1" is: 80040402
+Error number for "Value Not Set 2" is: 80040403
+Error messages will be interpreted to infer state.
+ 
+19:03:28.939 AccessChecks                  DEBUG    Before MyBase.CheckAccessibility
+19:03:28.946 Driver Access Checks          OK       
+19:03:29.039 AccessChecks                  DEBUG    Successfully created driver using Activator.CreateInstance
+19:03:29.045 WaitForAbsolute               DEBUG    500 Waiting for driver initialisation
+19:03:29.659 AccessChecks                  OK       Successfully created driver using late binding
+19:03:33.908 AccessChecks                  OK       Successfully connected using late binding
+19:03:33.919 AccessChecks                  INFO     The driver is a COM object
+19:03:33.930 ReleaseCOMObjects             DEBUG      Start of ReleaseCOMObject
+19:03:33.942 ReleaseCOMObjects             DEBUG      Unmarshalling __ComObject
+19:03:33.949 ReleaseCOMObjects             DEBUG      Releasing COM object
+19:03:33.958 ReleaseCOMObjects             DEBUG      Remaining object count: 0, LoopCount: 1
+19:03:33.966 ReleaseCOMObjects             DEBUG      End of ReleaseCOMObject
+19:03:33.975 AccessChecks                  DEBUG    Collecting garbage
+19:03:33.985 AccessChecks                  DEBUG    Collecting garbage complete
+19:03:33.995 AccessChecks                  DEBUG    Finished waiting for pending finalisers
+19:03:34.004 WaitForAbsolute               DEBUG    500 Waiting for device driver to be cleaned up by operating system
+19:03:34.621 AccessChecks                  DEBUG    After MyBase.CheckAccessibility
+19:03:34.639 AccessChecks                  DEBUG    Creating late bound object for interface test
+19:03:34.743 AccessChecks                  DEBUG    Created late bound object OK
+19:03:34.756 AccessChecks                  DEBUG    Exception: Unable to cast COM object of type 'System.__ComObject' to interface type 'ASCOM.Interface.ITelescope'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{EF0C67AD-A9D3-4F7B-A635-CD2095517633}' failed due to the following error: No such interface supported (Exception from HRESULT: 0x80004002 (E_NOINTERFACE)).
+19:03:34.768 AccessChecks                  DEBUG    Creating late bound object for interface test
+19:03:34.780 AccessChecks                  DEBUG    Created late bound object OK
+19:03:34.793 AccessChecks                  DEBUG    Exception: Unable to cast COM object of type 'System.__ComObject' to interface type 'ASCOM.Interface.ITelescope'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{EF0C67AD-A9D3-4F7B-A635-CD2095517633}' failed due to the following error: No such interface supported (Exception from HRESULT: 0x80004002 (E_NOINTERFACE)).
+19:03:34.805 AccessChecks                  DEBUG    Creating late bound object for interface test
+19:03:34.819 AccessChecks                  DEBUG    Created late bound object OK
+19:03:34.831 AccessChecks                  DEBUG    Exception: Unable to cast COM object of type 'System.__ComObject' to interface type 'ASCOM.Interface.ITelescope'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{EF0C67AD-A9D3-4F7B-A635-CD2095517633}' failed due to the following error: No such interface supported (Exception from HRESULT: 0x80004002 (E_NOINTERFACE)).
+19:03:34.844 AccessChecks                  INFO     Device does not expose interface ITelescopeV2
+19:03:34.962 ReleaseCOMObjects             DEBUG      Start of ReleaseCOMObject
+19:03:34.981 ReleaseCOMObjects             DEBUG      GetType Exception: Object reference not set to an instance of an object.
+19:03:34.998 ReleaseCOMObjects             DEBUG      Releasing COM object
+19:03:35.011 ReleaseCOMObjects             DEBUG      ReleaseComObject Exception: Object reference not set to an instance of an object.
+19:03:35.026 ReleaseCOMObjects             DEBUG      End of ReleaseCOMObject
+19:03:35.040 ReleaseCOMObjects             DEBUG      Start of ReleaseCOMObject
+19:03:35.054 ReleaseCOMObjects             DEBUG      Unmarshalling __ComObject
+19:03:35.068 ReleaseCOMObjects             DEBUG      Releasing COM object
+19:03:35.082 ReleaseCOMObjects             DEBUG      Remaining object count: 0, LoopCount: 1
+19:03:35.096 ReleaseCOMObjects             DEBUG      End of ReleaseCOMObject
+19:03:35.114 WaitForAbsolute               DEBUG    500 TestEarlyBinding waiting for Telescope Object to Dispose
+19:03:35.736 AccessChecks                  DEBUG    Creating late bound object for interface test
+19:03:35.855 AccessChecks                  DEBUG    Created late bound object OK
+19:03:35.973 AccessChecks                  DEBUG    Successfully created driver with interface ITelescopeV3
+19:03:36.488 AccessChecks                  INFO     Device exposes interface ITelescopeV3
+19:03:39.890 Telescope:CreateDevice        DEBUG    Created telescope on attempt: 1
+19:03:39.914 ReleaseCOMObjects             DEBUG      Start of ReleaseCOMObject
+19:03:39.931 ReleaseCOMObjects             DEBUG      Unmarshalling __ComObject
+19:03:39.947 ReleaseCOMObjects             DEBUG      Releasing COM object
+19:03:39.964 ReleaseCOMObjects             DEBUG      Remaining object count: 0, LoopCount: 1
+19:03:39.981 ReleaseCOMObjects             DEBUG      End of ReleaseCOMObject
+19:03:39.998 ReleaseCOMObjects             DEBUG      Start of ReleaseCOMObject
+19:03:40.015 ReleaseCOMObjects             DEBUG      Unmarshalling __ComObject
+19:03:40.033 ReleaseCOMObjects             DEBUG      Releasing COM object
+19:03:40.052 ReleaseCOMObjects             DEBUG      Remaining object count: -1, LoopCount: 1
+19:03:40.071 ReleaseCOMObjects             DEBUG      End of ReleaseCOMObject
+19:03:40.092 WaitForAbsolute               DEBUG    500 TestEarlyBinding waiting for Telescope Object to Dispose
+19:03:40.732 WaitForAbsolute               DEBUG    500 Waiting for driver to initialise
+19:03:41.365 AccessChecks                  OK       Successfully created driver using driver access toolkit
+19:03:41.866 AccessChecks                  OK       Successfully connected using driver access toolkit
+19:03:44.895 AccessChecks                  DEBUG    Successfully disconnected using driver access toolkit
+19:03:44.923 Telescope:CreateDevice        DEBUG    Created telescope on attempt: 1
+19:03:44.944 WaitForAbsolute               DEBUG    500 Waiting for Accessibility Telescope Object to Dispose
+ 
+19:03:45.600 Telescope:CreateDevice        DEBUG    Creating ProgID: ASCOM.NexStar.Telescope
+Conform is using ASCOM.DriverAccess.Telescope to get a Telescope object
+19:03:45.647 WaitForAbsolute               DEBUG    500 Waiting for driver to initialise
+19:03:46.273 Telescope:CreateDevice        DEBUG    Created telescope on attempt: 1
+19:03:46.302 ConformanceCheck              OK       Driver instance created successfully
+19:03:46.795 ConformanceCheck              OK       Connected OK
+ 
+Common Driver Methods 
+19:03:46.875 InterfaceVersion              OK       3
+19:03:46.897 Connected                     OK       True
+19:03:46.919 Description                   OK       Celestron NexStar Telescope
+19:03:46.940 DriverInfo                    OK       Celestron NexStar Telescope
+19:03:46.962 DriverVersion                 OK       6.0
+19:03:46.984 Name                          OK       Celestron CPC
+19:03:47.006 CommandString                 INFO     Conform cannot test the CommandString method
+19:03:47.027 CommandBlind                  INFO     Conform cannot test the CommandBlind method
+19:03:47.047 CommandBool                   INFO     Conform cannot test the CommandBool method
+19:03:47.069 Action                        INFO     Conform cannot test the Action method
+19:03:47.095 SupportedActions              OK       Driver returned an empty action list
+ 
+Can Properties 
+19:03:47.163 CanFindHome                   OK       False
+19:03:47.185 CanPark                       OK       False
+19:03:47.207 CanPulseGuide                 OK       True
+19:03:47.229 CanSetDeclinationRate         OK       True
+19:03:47.251 CanSetGuideRates              OK       True
+19:03:47.274 CanSetPark                    OK       True
+19:03:47.296 CanSetPierSide                OK       False
+19:03:47.319 CanSetRightAscensionRate      OK       True
+19:03:47.342 CanSetTracking                OK       True
+19:03:47.364 CanSlew                       OK       True
+19:03:47.386 CanSlewltAz                   OK       True
+19:03:47.408 CanSlewAltAzAsync             OK       True
+19:03:47.430 CanSlewAsync                  OK       True
+19:03:47.452 CanSync                       OK       True
+19:03:47.474 CanSyncAltAz                  OK       False
+19:03:47.496 CanUnPark                     OK       False
+ 
+Pre-run Checks 
+19:03:47.559 Mount Safety                  INFO     Scope is not parked, continuing testing
+19:03:48.296 Mount Safety                  INFO     Scope tracking has been enabled
+19:03:48.327 TimeCheck                     INFO     PC Time Zone:  Pacific Daylight Time, offset 7 hours.
+19:03:48.352 TimeCheck                     INFO     PC UTCDate:    21-Sep-2012 02:03:48
+19:03:52.267 TimeCheck                     INFO     Mount UTCDate: 21-Sep-2012 02:04:07
+ 
+Properties 
+19:03:52.382 AlignmentMode                 OK       algPolar
+19:03:52.464 Altitude                      OK       55.04
+19:03:52.491 ApertureArea                  OK       0.0544571210395623
+19:03:52.511 ApertureDiameter              OK       0.28
+19:03:52.530 AtHome                        OK       False
+19:03:52.549 AtPark                        OK       False
+19:03:52.629 Azimuth                       OK       155.67
+19:03:52.720 Declination                   OK       55:06:54
+19:03:52.747 DeclinationRate Read          OK       0.00
+19:03:52.868 DeclinationRate Write         OK       0.00
+19:03:52.895 DoesRefraction Read           OK       False
+19:03:52.916 DoesRefraction Write          OK       Can set DoesRefraction to True
+19:03:52.935 EquatorialSystem              OK       equLocalTopocentric
+19:03:52.954 FocalLength                   OK       2.8
+19:03:52.999 GuideRateDeclination Read     OK       0.00
+19:03:53.048 GuideRateDeclination Write    OK       Can write Declination Guide Rate OK
+19:03:53.104 GuideRateRightAscension Read  OK       0.00
+19:03:53.154 GuideRateRightAscension Write OK       Can set RightAscension Guide OK
+19:03:53.173 IsPulseGuideing               OK       False
+19:03:53.254 RightAscension                OK       19:32:45
+19:03:53.279 RightAscensionRate Read       OK       0.00
+19:03:53.332 RightAscensionRate Write      OK       0.00
+19:03:53.354 SiteElevation Read            OK       180
+19:03:53.380 SiteElevation Write           OK       COM Invalid Value exception generated as expected on set site elevation < -300m
+19:03:53.400 SiteElevation Write           OK       COM Invalid Value exception generated as expected on set site elevation > 10,000m
+19:03:53.420 SiteElevation Write           OK       Legal value 180m written successfully
+19:03:53.439 SiteLatitude Read             OK       45:27:37
+19:03:53.460 SiteLatitude Write            OK       COM Invalid Value exception generated as expected on set site latitude < -90 degrees
+19:03:53.480 SiteLatitude Write            OK       COM Invalid Value exception generated as expected on set site latitude > 90 degrees
+19:03:53.584 SiteLatitude Write            OK       Legal value 45:27:37 degrees written successfully
+19:03:53.611 SiteLongitude Read            OK       -122:35:52
+19:03:53.636 SiteLongitude Write           OK       COM Invalid Value exception generated as expected on set site longitude < -180 degrees
+19:03:53.657 SiteLongitude Write           OK       COM Invalid Value exception generated as expected on set site longitude > 180 degrees
+19:03:53.760 SiteLongitude Write           OK       Legal value -122:35:52 degrees written successfully
+19:03:53.789 Slewing                       OK       False
+19:03:53.816 SlewSettleTime Read           OK       0
+19:03:53.845 SlewSettleTime Write          OK       COM Invalid Value exception generated as expected on set slew settle time < 0
+19:03:53.870 SlewSettleTime Write          OK       Legal value 0 seconds written successfully
+19:03:53.891 SideOfPier Read               OK       .NET - Feature not implemented
+19:03:53.962 SiderealTime                  OK       17:55:07
+19:03:53.987 SiderealTime                  OK       Scope and ASCOM sideral times agree to better than 1 minute, Scope: 17:55:07, ASCOM: 17:54:56
+19:03:54.008 TargetDeclination Read        OK       COM Not Set exception generated on read before write
+19:03:54.030 TargetDeclination Write       OK       COM Invalid Value exception generated as expected on set TargetDeclination < -90 degrees
+19:03:54.052 TargetDeclination Write       OK       COM Invalid Value exception generated as expected on set TargetDeclination > 90 degrees
+19:03:54.072 TargetDeclination Write       OK       Legal value 01:00:00" DD:MM:SS written successfully
+19:03:54.093 TargetRightAscension Read     OK       COM Not Set exception generated on read before write
+19:03:54.115 TargetRightAscension Write    OK       COM Invalid Value exception generated as expected on set TargetRightAscension < 0 hours
+19:03:54.136 TargetRightAscension Write    OK       COM Invalid Value exception generated as expected on set TargetRightAscension > 24 hours
+19:03:54.210 TargetRightAscension Write    OK       Legal value 13:55:08 HH:MM:SS written successfully
+19:03:54.240 Tracking Read                 OK       True
+19:03:55.296 Tracking Write                OK       False
+19:03:56.370 TrackingRates                 DEBUG    OK - the driver returned an TrackingRates object
+19:03:56.399 TrackingRates Count           DEBUG    3
+19:03:56.424 TrackingRates Count           DEBUG    Found drive rate: driveSidereal
+19:03:56.444 TrackingRates Count           DEBUG    Found drive rate: driveLunar
+19:03:56.464 TrackingRates Count           DEBUG    Found drive rate: driveSolar
+19:03:56.492 TrackingRates Enum            DEBUG    OK - the driver returned an Enumerator object
+19:03:56.511 TrackingRates Enum            DEBUG    Reset Enumerator
+19:03:56.531 TrackingRates Enum            DEBUG    Reading Current
+19:03:56.549 TrackingRates Enum            DEBUG    Read Current OK, Type: Int32
+19:03:56.568 TrackingRates Enum            DEBUG    Found drive rate: driveSidereal
+19:03:56.587 TrackingRates Enum            DEBUG    Reading Current
+19:03:56.606 TrackingRates Enum            DEBUG    Read Current OK, Type: Int32
+19:03:56.624 TrackingRates Enum            DEBUG    Found drive rate: driveLunar
+19:03:56.643 TrackingRates Enum            DEBUG    Reading Current
+19:03:56.662 TrackingRates Enum            DEBUG    Read Current OK, Type: Int32
+19:03:56.681 TrackingRates Enum            DEBUG    Found drive rate: driveSolar
+19:03:56.701 TrackingRates                 DEBUG    Read TrackingRates OK, Count: 3
+19:03:56.722 TrackingRates                          Found drive rate: driveSidereal
+19:03:56.741 TrackingRates                          Found drive rate: driveLunar
+19:03:56.761 TrackingRates                          Found drive rate: driveSolar
+19:03:56.781 TrackingRates                 OK       Drive rates read OK
+19:03:56.801 TrackingRate Read             OK       driveSidereal
+19:03:56.850 TrackingRate Write            OK       Successfully set drive rate: driveSidereal
+19:03:56.899 TrackingRate Write            OK       Successfully set drive rate: driveLunar
+19:03:56.948 TrackingRate Write            OK       Successfully set drive rate: driveSolar
+19:03:59.261 UTCDate Read                  OK       9/21/2012 2:04:14 AM
+19:04:02.264 UTCDate Write                 OK       New UTCDate written successfully: 9/21/2012 2:04:17 AM
+ 
+Methods 
+19:04:02.448 CanMoveAxis:Primary           OK       CanMoveAxis:Primary True
+19:04:02.471 CanMoveAxis:Secondary         OK       CanMoveAxis:Secondary True
+19:04:02.493 CanMoveAxis:Tertiary          OK       CanMoveAxis:Tertiary False
+19:04:02.516 Park                          OK       CanPark is false and .NET MethodNotImplemented exception generated as expected
+19:04:02.538 UnPark                        OK       CanUnPark is false and MethodNotImplemented exception generated as expected
+19:04:02.630 AbortSlew                     OK       AbortSlew Ok when not slewing
+19:04:02.667 AxisRate:Primary              DEBUG    OK - the driver returned an AxisRates object
+19:04:02.688 AxisRate:Primary Count        DEBUG    The driver returned 1 rates
+19:04:02.710 AxisRate:Primary Count        DEBUG    Rate 1 - Minimum: 0, Maximum: 4.5
+19:04:02.731 AxisRate:Primary Enum         DEBUG    OK - the driver returned an Enumerator object
+19:04:02.752 AxisRate:Primary Enum         DEBUG    Reset Enumerator
+19:04:02.772 AxisRate:Primary Enum         DEBUG    Reading Current
+19:04:02.792 AxisRate:Primary Enum         DEBUG    Read Current OK, Type: _Rate
+19:04:02.813 AxisRate:Primary Enum         DEBUG    Found axis rate - Minimum: 0, Maximum: 4.5
+19:04:02.836 AxisRate:Primary              OK       Axis rate minimum: 0 Axis rate maximum: 4.5
+19:04:02.857 AxisRate:Primary              OK       No overlapping axis rates found
+19:04:02.878 AxisRate:Primary              OK       No duplcate axis rates found
+19:04:02.903 AxisRate:Secondary            DEBUG    OK - the driver returned an AxisRates object
+19:04:02.924 AxisRate:Secondary Count      DEBUG    The driver returned 1 rates
+19:04:02.946 AxisRate:Secondary Count      DEBUG    Rate 1 - Minimum: 0, Maximum: 4.5
+19:04:02.968 AxisRate:Secondary Enum       DEBUG    OK - the driver returned an Enumerator object
+19:04:02.988 AxisRate:Secondary Enum       DEBUG    Reset Enumerator
+19:04:03.008 AxisRate:Secondary Enum       DEBUG    Reading Current
+19:04:03.028 AxisRate:Secondary Enum       DEBUG    Read Current OK, Type: _Rate
+19:04:03.048 AxisRate:Secondary Enum       DEBUG    Found axis rate - Minimum: 0, Maximum: 4.5
+19:04:03.071 AxisRate:Secondary            OK       Axis rate minimum: 0 Axis rate maximum: 4.5
+19:04:03.092 AxisRate:Secondary            OK       No overlapping axis rates found
+19:04:03.112 AxisRate:Secondary            OK       No duplcate axis rates found
+19:04:03.135 AxisRate:Tertiary             DEBUG    OK - the driver returned an AxisRates object
+19:04:03.157 AxisRate:Tertiary Count       DEBUG    The driver returned 0 rates
+19:04:03.178 AxisRate:Tertiary Enum        DEBUG    OK - the driver returned an Enumerator object
+19:04:03.199 AxisRate:Tertiary Enum        DEBUG    Reset Enumerator
+19:04:03.220 AxisRate:Tertiary             OK       Empty axis rate returned
+19:04:03.244 FindHome                      OK       .NET - Feature not implemented
+19:04:03.268 MoveAxis Primary              DEBUG    Number of primary rates: 1
+19:04:03.297 MoveAxis Primary              DEBUG    Number of rates found: 1
+19:04:03.321 MoveAxis Primary              DEBUG    Checking rates: 0 4.5, Current rates: 0 4.5
+19:04:03.343 MoveAxis Primary              DEBUG    Found minimum rate: 0 found maximum rate: 4.5
+19:04:03.464 MoveAxis Primary              OK       Can successfully set a movement rate of zero
+19:04:03.495 MoveAxis Primary              DEBUG    Using minimum rate: -5.5
+19:04:03.518 MoveAxis Primary              OK       Exception correctly generated when moveaxis set below lowest rate (-5.5)
+19:04:03.540 MoveAxis Primary              DEBUG    Using maximum rate: 5.5
+19:04:03.562 MoveAxis Primary              OK       Exception correctly generated when moveaxis set above highest rate (5.5)
+19:04:08.631 MoveAxis Primary              OK       Successfully moved axis at minimum rate: 0
+19:04:13.685 MoveAxis Primary              OK       Successfully moved axis at maximum rate: 4.5
+19:04:18.833 MoveAxis Primary              OK       Tracking state correctly retained for both tracking states
+19:04:18.864 MoveAxis Secondary            DEBUG    Number of secondary rates: 1
+19:04:18.880 MoveAxis Secondary            DEBUG    Number of rates found: 1
+19:04:18.911 MoveAxis Secondary            DEBUG    Checking rates: 0 4.5, Current rates: 0 4.5
+19:04:18.927 MoveAxis Secondary            DEBUG    Found minimum rate: 0 found maximum rate: 4.5
+19:04:19.239 MoveAxis Secondary            OK       Can successfully set a movement rate of zero
+19:04:19.270 MoveAxis Secondary            DEBUG    Using minimum rate: -5.5
+19:04:19.286 MoveAxis Secondary            OK       Exception correctly generated when moveaxis set below lowest rate (-5.5)
+19:04:19.317 MoveAxis Secondary            DEBUG    Using maximum rate: 5.5
+19:04:19.332 MoveAxis Secondary            OK       Exception correctly generated when moveaxis set above highest rate (5.5)
+19:04:24.605 MoveAxis Secondary            OK       Successfully moved axis at minimum rate: 0
+19:04:29.660 MoveAxis Secondary            OK       Successfully moved axis at maximum rate: 4.5
+19:04:34.823 MoveAxis Secondary            OK       Tracking state correctly retained for both tracking states
+19:04:34.854 MoveAxis Tertiary             OK       CanMoveAxis Tertiary is false and COM Invalid Value exception generated
+19:04:37.007 PulseGuide                    OK       Asynchronous pulseguide found OK
+19:05:09.986 SlewToCoordinates             INFO     Slewed to within 00:00:04 HH:MM:SS of expected RA co-ordinate: 16:55:51
+19:05:10.126 SlewToCoordinates             INFO     Slewed to within 00:00:02" DD:MM:SS of expected DEC co-ordinate: 01:00:00"
+19:05:29.704 SlewToCoordinatesAsync        INFO     Slewed to within 00:00:04 HH:MM:SS of expected RA co-ordinate: 15:56:24
+19:05:29.860 SlewToCoordinatesAsync        INFO     Slewed to within 00:00:02" DD:MM:SS of expected DEC co-ordinate: 02:00:00"
+19:05:49.407 SlewToTarget                  INFO     Slewed to within 00:00:04 HH:MM:SS of expected RA co-ordinate: 14:56:44
+19:05:49.563 SlewToTarget                  INFO     Slewed to within 00:00:02" DD:MM:SS of expected DEC co-ordinate: 03:00:00"
+19:06:09.125 SlewToTargetAsync             INFO     Slewed to within 00:00:03 HH:MM:SS of expected RA co-ordinate: 13:57:04
+19:06:09.281 SlewToTargetAsync             INFO     Slewed to within 00:00:03" DD:MM:SS of expected DEC co-ordinate: 04:00:00"
+19:06:09.313 DestinationSideOfPier                  Test skipped as AligmentMode is not German Polar
+19:06:56.643 SlewToAltAz                   INFO     Slewed to within 00:00:12" DD:MM:SS of expected Azimuth: 150:00:00"
+19:06:56.799 SlewToAltAz                   INFO     Slewed to within 00:00:02" DD:MM:SS of expected Altitude: 50:00:00"
+19:07:16.346 SlewToAltAzAsync              INFO     Slewed to within 00:00:11" DD:MM:SS of expected Azimuth: 155:00:00"
+19:07:16.486 SlewToAltAzAsync              INFO     Slewed to within 00:00:03" DD:MM:SS of expected Altitude: 55:00:00"
+19:07:16.518 SyncToCoordinates             DEBUG    Reading RightAscension
+19:07:16.674 SyncToCoordinates             DEBUG    Read RightAscension, Reading Declination
+19:07:16.830 SyncToCoordinates             DEBUG    Read Declination, RA/DEC: 19:38:51 55:04:31
+19:07:16.970 SyncToCoordinates             DEBUG    SyncToCoordinates: 19:37:39 55:05:43
+19:07:17.173 SyncToCoordinates             DEBUG    Completed SyncToCoordinates
+19:07:17.454 SyncToCoordinates                      RA Original: 19:38:51 Sync to: 19:37:39 New:19:37:39
+19:07:17.485 SyncToCoordinates                      DEC Original: 55:04:31" Sync to: 55:05:43" New:55:05:43"
+19:07:17.500 SyncToCoordinates             OK       Synced RA OK
+19:07:17.532 SyncToCoordinates             OK       Synced DEC OK
+19:07:17.563 SyncToTarget                  DEBUG    Reading RightAscension
+19:07:17.703 SyncToTarget                  DEBUG    Read RightAscension, Reading Declination
+19:07:17.859 SyncToTarget                  DEBUG    Read Declination, RA/DEC: 19:37:39 55:05:43
+19:07:17.890 SyncToTarget                  DEBUG    Setting TargetRightAscension: 19:36:27
+19:07:17.922 SyncToTarget                  DEBUG    Set TargetRightAscension, Setting TargetDeclination: 55:06:55
+19:07:17.953 SyncToTarget                  DEBUG    Set TargetDeclination, SyncToTarget
+19:07:18.140 SyncToTarget                  DEBUG    Completed SyncToTarget
+19:07:18.421 SyncToTarget                           RA Original: 19:37:39 Sync to: 19:36:27 New:19:36:27
+19:07:18.452 SyncToTarget                           DEC Original: 55:05:43" Sync to: 55:06:55" New:55:06:55"
+19:07:18.483 SyncToTarget                  OK       Synced RA OK
+19:07:18.499 SyncToTarget                  OK       Synced DEC OK
+19:07:18.530 SyncToAltAz                   DEBUG    Reading RightAscension
+19:07:18.686 SyncToAltAz                   DEBUG    Read RightAscension, Reading Declination
+19:07:18.842 SyncToAltAz                   DEBUG    Read Declination, RA/DEC: 19:36:27 55:06:55
+19:07:19.216 SyncToAltAz                   OK       CanSyncAltAz is False and .NET Not Implemented exception generated as expected
+ 
+Post-run Checks 
+19:07:19.388 Mount Safety                  OK       Tracking stopped to protect your mount.
+ 
+Conformance test complete 
+19:07:19.466 Dispose                       DEBUG    Disposing of Telescope driver: True False
+ 
+No errors, warnings or issues found: your driver passes ASCOM validation!! 
