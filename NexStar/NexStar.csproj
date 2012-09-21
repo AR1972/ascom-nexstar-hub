@@ -122,6 +122,7 @@
     <PreBuildEvent>
     </PreBuildEvent>
     <PostBuildEvent>COPY /Y "$(SolutionDir)register.cmd" "$(TargetDir)register.cmd"
-COPY /Y "$(SolutionDir)unregister.cmd" "$(TargetDir)unregister.cmd"</PostBuildEvent>
+COPY /Y "$(SolutionDir)unregister.cmd" "$(TargetDir)unregister.cmd"
+COPY /Y "$(TargetDir)$(TargetName).exe" "$(SolutionDir)installer\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
