@@ -153,9 +153,10 @@ namespace ASCOM.NexStar
     [Guid("e059f6cf-e76f-4c24-9b8f-f31a4068177e")]
     [ClassInterface(ClassInterfaceType.None)]
     [ComVisible(true)]
-    public class TrackingRates : ITrackingRates, IEnumerable
+    public class TrackingRates : ITrackingRates, IEnumerable, IEnumerator, IDisposable
     {
         private readonly DriveRates[] trackingRates;
+        private static int Position = -1;
         //
         // Default constructor - Internal prevents public creation
         // of instances. Returned by Telescope.AxisRates.
@@ -181,7 +182,8 @@ namespace ASCOM.NexStar
 
         public IEnumerator GetEnumerator()
         {
-            return this.trackingRates.GetEnumerator();
+            Position = -1;
+            return this;
         }
 
         public void Dispose()
@@ -194,6 +196,28 @@ namespace ASCOM.NexStar
             get { return this.trackingRates[index - 1]; }	// 1-based
         }
 
+        #endregion
+
+        #region IEnumerator Members
+
+        public object Current
+        {
+            get { return this.trackingRates[Position]; }
+        }
+
+        public bool MoveNext()
+        {
+            if (++Position > this.trackingRates.Length)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public void Reset()
+        {
+            Position = -1;
+        }
         #endregion
     }
     #endregion
